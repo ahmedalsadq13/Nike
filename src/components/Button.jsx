@@ -1,5 +1,5 @@
 
-function Button({label,iconURL,backgroundColor, textColor,borderColor}) {
+function Button({label,iconURL,backgroundColor, textColor,borderColor,fullWidth}) {
     return (
         <button className={`
         flex justify-center
@@ -7,7 +7,7 @@ function Button({label,iconURL,backgroundColor, textColor,borderColor}) {
         gap-2 px-7
         py-4 border font-montserrat
         text-lg leading-none
-        rounded-full
+        rounded-full ${fullWidth && 'w-full'}
         ${backgroundColor
             ? `${backgroundColor} ${textColor} ${borderColor} `: 'bg-coral-red text-white border-coral-red hover:bg-red-500 [transition:.2s]'}`
         }>
